@@ -21,7 +21,7 @@ private:
 {
   for (auto transform : msg->transforms)
   {    
-      transform.child_frame_id = "base_footprint";
+      //transform.child_frame_id = "base_footprint";
     
     tf_broadcaster_->sendTransform(transform);
   }

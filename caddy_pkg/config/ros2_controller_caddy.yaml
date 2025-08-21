@@ -20,7 +20,7 @@ ackermann_steering_controller:
     traction_track_width: 0.212
     steering_track_width: 0.1734
     publish_rate: 50.0
-    base_frame_id: "base_link"
+    base_frame_id: "base_footprint"
     open_loop: false
     position_feedback: false
     odom_frame_id: "odom"
