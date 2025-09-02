@@ -130,6 +130,7 @@
   </link>
 
   <!-- DELANTERAS-->
+  
   <!-- Mangueta de dirección Izquierda-->
 
   <joint name='left_front_steer_joint' type='continuous'>
