@@ -16,10 +16,10 @@ def generate_launch_description():
     # Configure ROS nodes for launch
 
     # Setup project paths
-    pkg_project = get_package_share_directory('caddy_pkg')
+    pkg_project = get_package_share_directory('caddy_ai2_ros2_simulation')
 
     # Load the SDF file from "description" package
-    urdf_file  =  os.path.join(pkg_project, 'urdf', 'caddy.urdf')
+    urdf_file  =  os.path.join(pkg_project,  'description', 'urdf', 'caddy.urdf')
     with open(urdf_file, 'r') as infp:
         robot_desc = infp.read()
 
@@ -64,7 +64,7 @@ def generate_launch_description():
     rviz = Node(
        package='rviz2',
        executable='rviz2',
-       arguments=['-d', os.path.join(pkg_project, 'rviz', 'caddy.rviz')],
+       arguments=['-d', os.path.join(pkg_project, 'tools', 'rviz', 'caddy.rviz')],
        condition=IfCondition(LaunchConfiguration('rviz'))
     )
 
